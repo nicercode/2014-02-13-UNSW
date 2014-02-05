@@ -7,8 +7,6 @@ Website for the bootcamp: http://nicercode.github.io/2014-02-13-UNSW
 
 ===============================
 
-
-
 This intensive 2-day Software Carpentry bootcamp will introduce attendees to a range of computing skills aimed at making them more productive and efficient in their work. A substantial focus of the workshop will be on improving programming skills in R, but will also include topics on version control, using the shell, and reproducible research. Short tutorials will alternate with hands-on practical exercises. Participants will be encouraged both to help one another, and to apply what they have learned to their own research problems during and between sessions.
 
 **Who**
@@ -36,4 +34,3 @@ Participants must bring a laptop with a few specific software packages installed
 **About Software Carpentry**
 
 [Software Carpentry] (http://software-carpentry.org/) is a volunteer organization whose members teach basic software skills to researchers in science, engineering, and medicine. Founded in 1998, we are now part of the Mozilla Science Lab. 
-
