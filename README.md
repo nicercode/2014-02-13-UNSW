@@ -25,11 +25,11 @@ Participants must bring a laptop with a few specific software packages installed
 
 **Instructors** 
 
-[Karthik Ram] (http://nature.berkeley.edu/~kram): quantitative ecologist at UC Berkeley broadly interested in the structure and dynamics of food webs in terrestrial systems. He blogs at Inundata, and is also the co-founder of [rOpenSci] (http://ropensci.org/), a project which aims to foster reproducible research and data reuse through open source software tools.
- 
 [Daniel Falster] (http://dfalster.github.io/): post-doc at Macquarie University in Sydney, Australia. He uses a combination of math, computer models, and large data sets to test fundamental ideas about the processes shaping terrestrial vegetation and plant diversity. He is passionate about science, open data, reproducible research, and teaching biologists to code.
  
 [Rich FitzJohn] (http://www.zoology.ubc.ca/~fitzjohn/): postdoc with Mark Westoby at Macquarie University. He recently completed a PhD with Sally Otto in the Zoology department and Biodiversity Research Centre at UBC. 
+
+[Diego Barneche] (http://acropora.bio.mq.edu.au/people/diego-barneche/): PhD student at Macquarie University.  He is interested in large-scale ecological and evolutionary patterns. Currently he is applying statistical and mathematical models to understand how the metabolic theory of ecology predicts patterns of biomass and abundance at different organisation levels.
 
 **About Software Carpentry**
 
