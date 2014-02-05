@@ -1,37 +1,25 @@
 ---
 layout: bootcamp
 root: .
-venue: Euphoric State University
-address: 123 College Street, Euphoria
-country: United-States
-humandate: Feb 17-18, 2020
+venue: University of New South Wales
+address: High St, Kensington NSW 2052
+country: Australia
+humandate: Feb 13-14, 2014
 humantime: 9:00 am - 4:30 pm
-startdate: 2020-06-17
-enddate: 2020-06-18
-latlng: 41.7901128,-87.6007318
+startdate: 2014-02-13
+enddate: 2014-02-14
+latlng: -33.917410,151.231307
 registration: restricted
-instructor: ["Grace Hopper", "Alan Turing"]
-contact: admin@software-carpentry.org
+instructor: ["Daniel Falster", "Rich FitzJohn"]
+contact: a.letten@unsw.edu.au
 ---
 <div align="center">
-  <p><strong><em>
-      This page is a template for bootcamp home pages.
-      <br/>
-      Please see
-      <a href="https://github.com/swcarpentry/bc">https://github.com/swcarpentry/bc</a>
-      for instructions on how to create
-      a repository for your bootcamp.
-      <br/>
-      Please also see
-      the <a href="{{page.root}}/lessons/index.html">index to our lessons</a>
-      and the <a href="{{page.root}}/lessons/setup.html">index to setup instructions</a>.
-  </em></strong></p>
 </div>
 {% include bootcamps/instructors.html %}
 {% include bootcamps/what.html %}
 {% include bootcamps/who.html %}
 {% include bootcamps/requirements.html %}
-{% include bootcamps/python.html %}
+{% include bootcamps/r.html %}
 {% include bootcamps/contact.html %}
 
 <hr/>
@@ -45,7 +33,7 @@ contact: admin@software-carpentry.org
   </div>
   <div class="span6">
     {% include setup/overview-git.html %}
-    {% include setup/overview-python.html %}
+    {% include setup/overview-r.html %}
   </div>
 </div>
 
@@ -67,21 +55,6 @@ contact: admin@software-carpentry.org
     </ul>
   </div>
   <div class="span6">
-    <h3><a href="lessons/swc-db/tutorial.html">Databases</a></h3>
-    <ul>
-      <li>{% include guide-db/select/title.md %}</li>
-      <li>{% include guide-db/distinct/title.md %}</li>
-      <li>{% include guide-db/filter/title.md %}</li>
-      <li>{% include guide-db/calc/title.md %}</li>
-      <li>{% include guide-db/sort/title.md %}</li>
-      <li>{% include guide-db/null/title.md %}</li>
-      <li>{% include guide-db/aggregate/title.md %}</li>
-      <li>{% include guide-db/grouping/title.md %}</li>
-      <li>{% include guide-db/join/title.md %}</li>
-      <li>{% include guide-db/create/title.md %}</li>
-      <li>{% include guide-db/transactions/title.md %}</li>
-      <li>{% include guide-db/programming/title.md %}</li>
-    </ul>
   </div>
 </div>
 
@@ -91,6 +64,6 @@ contact: admin@software-carpentry.org
 
 <ul>
   <li><a href="{{page.root}}/lessons/ref/shell.html">The Unix Shell</a></li>
-  <li><a href="{{page.root}}/lessons/ref/python.html">Python</a></li>
+  <li><a href="{{page.root}}/lessons/ref/r.html">r</a></li>
   <li><a href="{{page.root}}/lessons/ref/sql.html">SQL</a></li>
 </ul>
