@@ -3,6 +3,8 @@ Software Carpentry Bootcamp at UNSW
 
 Schedule, installation notes etc TBA.
 
+Website for the bootcamp: http://nicercode.github.io/2014-02-13-UNSW
+
 ===============================
 
 
