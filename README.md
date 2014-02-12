@@ -17,20 +17,22 @@ Please note that this is not an introductory R course and in order to get the mo
 
 **Cost**
 
-To avoid last minute drop-outs, all attendees are asked to pay a token $20 'deposit'. This will go towards an evening function (couple of drinks at the pub) at the end of the second day. Instructions on how to pay will be sent out after registration. Thanks! 
+To avoid last minute drop-outs, all attendees are asked to pay a token $20 'deposit'. This will go towards an evening function (couple of drinks at the pub) at the end of the second day. Instructions on how to pay will be sent out after registration. Thanks!
 
 **Requirements**
 
-Participants must bring a laptop with a few specific software packages installed. (The list will be sent to participants a week before the boot camp.)
+Participants must bring a laptop with a few specific software packages installed. Installation instructions are [available here](lessons/setup.html).
 
-**Instructors** 
+In addition, [download the dataset we'll be using](data/gapminder-FiveYearData.csv), taken from the [gapminder project](www.gapminder.org).
+
+**Instructors**
 
 [Daniel Falster] (http://dfalster.github.io/): post-doc at Macquarie University in Sydney, Australia. He uses a combination of math, computer models, and large data sets to test fundamental ideas about the processes shaping terrestrial vegetation and plant diversity. He is passionate about science, open data, reproducible research, and teaching biologists to code.
- 
-[Rich FitzJohn] (http://www.zoology.ubc.ca/~fitzjohn/): postdoc with Mark Westoby at Macquarie University. He recently completed a PhD with Sally Otto in the Zoology department and Biodiversity Research Centre at UBC. 
+
+[Rich FitzJohn] (http://www.zoology.ubc.ca/~fitzjohn/): postdoc with Mark Westoby at Macquarie University. He recently completed a PhD with Sally Otto in the Zoology department and Biodiversity Research Centre at UBC.
 
 [Diego Barneche] (http://acropora.bio.mq.edu.au/people/diego-barneche/): PhD student at Macquarie University.  He is interested in large-scale ecological and evolutionary patterns. Currently he is applying statistical and mathematical models to understand how the metabolic theory of ecology predicts patterns of biomass and abundance at different organisation levels.
 
 **About Software Carpentry**
 
-[Software Carpentry] (http://software-carpentry.org/) is a volunteer organization whose members teach basic software skills to researchers in science, engineering, and medicine. Founded in 1998, we are now part of the Mozilla Science Lab. 
+[Software Carpentry] (http://software-carpentry.org/) is a volunteer organization whose members teach basic software skills to researchers in science, engineering, and medicine. Founded in 1998, we are now part of the Mozilla Science Lab.
