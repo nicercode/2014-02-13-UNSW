@@ -1,8 +1,6 @@
 Software Carpentry Bootcamp at UNSW
 ============================
 
-Schedule, installation notes etc TBA.
-
 Website for the bootcamp: http://nicercode.github.io/2014-02-13-UNSW
 
 ===============================
@@ -23,7 +21,7 @@ To avoid last minute drop-outs, all attendees are asked to pay a token $20 'depo
 
 Participants must bring a laptop with a few specific software packages installed. Installation instructions are [available here](lessons/setup.html).
 
-In addition, [download the dataset we'll be using](data/gapminder-FiveYearData.csv), taken from the [gapminder project](www.gapminder.org).
+In addition, [download the dataset we'll be using](https://raw.github.com/nicercode/2014-02-13-UNSW/gh-pages/data/gapminder-FiveYearData.csv), taken from the [gapminder project](www.gapminder.org).
 
 **Instructors**
 
