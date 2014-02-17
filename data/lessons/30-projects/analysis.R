@@ -77,11 +77,11 @@ variance(data.1982$pop) #try with var(data.1982$pop)
 # ANALYSES FORM LESSON 2 #
 ##########################
 library(plyr)
-get.n.countries(dat)
+get.n.countries(data)
 
 n.countries  <-  integer(0)
 for(continent in unique(data$continent)) {
-  n.countries[[continent]]  <-  get.n.countries(data[data$continent == continent, ])
+  n.countries[[continent]]  <-  get.n.countries(data[data$continent == continent, ])    
 }
 n.countries
 
@@ -90,7 +90,7 @@ ddply(data, .(continent), get.n.countries)
 ddply(data, .(continent, year), get.n.countries)
 ddply(data, .("continent", "year"), get.n.countries)
 ddply(data, ~continent*year, get.n.countries)
-get.total.pop(dat)
+get.total.pop(data)
 ddply(data, .(continent, year), get.total.pop)
 ddply(data, .(continent, year), function(x)sum(x$pop))
 lmPerContAndYear  <-  dlply(data, .(continent, year), model)
