@@ -17,7 +17,7 @@ variance  <-  function(x) {
   (1 / (length(x) - 1)) * sum((x-mean(x))^2)
 }
 
-linear.rescale  <-  function(x, range) {
+rescale  <-  function(x, range) {
   p  <-  (x - min(x)) / (max(x) - min(x))
   range[[1]] + p * (range[[2]] - range[[1]])
 }
@@ -46,22 +46,19 @@ colour.by.category <- function(things, table) {
   unname(table[things])
 }
 
-add.trend.line  <-  function(x, y, d, col) {
-  fit  <-  lm(d[[y]]~log10(d[[x]]))
-  abline(fit, col=col, lwd=1.5, lty=2)
+add.trend.line <- function(x, y, d, ...) {
+  lx <- log10(d[[x]])
+  fit <- lm(d[[y]] ~ lx)
+  xr <- range(lx)
+  lines(10^xr, predict(fit, list(lx=xr)), ...)
 }
 
-my.plot  <-  function(year, data, cols) {
-  dat.year  <-  data[data$year == year, ]
-  col       <-  colour.by.category(dat.year$continent, cols)
-  cex       <-  linear.rescale(sqrt(dat.year$pop), range=c(0.2,10))
-  plot(lifeExp ~ gdpPercap, dat.year, las=1, xlab='GDP per capta', ylab='Life expectancy', cex=cex, col='black', bg=col, pch=21, log="x", xlim=c(240,114000), ylim=c(20,85), main=unique(dat.year$year))
-  
-  for(continent in unique(dat.year$continent)) {
-    add.trend.line("gdpPercap", "lifeExp",
-                   d=dat.year[dat.year$continent == continent,],
-                   col=cols[[continent]])
-  }
+add.continent.trend.line <- function(x, y, d, continent, col.table, ...) {
+  add.trend.line(x, y, d[d$continent == continent,], col=col.table[continent], ...)
+}
+
+f <- function(continent) {
+  add.continent.trend.line("gdpPercap", "lifeExp", dat.1982, continent, col.table)
 }
 
 ##########################
@@ -107,5 +104,12 @@ col.table  <-  c(Asia='tomato',
                  Americas='darkgoldenrod1',
                  Oceania='green4')
 
-for (year in unique(dat$year))
-  my.plot(year, dat, col.table)
+col <- colour.by.category(dat.1982$continent, col.table)
+cex <- rescale(sqrt(dat.1982$pop), c(0.2, 10))
+
+plot(lifeExp ~ gdpPercap, dat.1982, log="x", cex=cex, col=col, pch=21)
+f("Africa")
+f("Asia")
+f("Europe")
+f("Americas")
+f("Oceania")
