@@ -58,20 +58,20 @@ add.continent.trend.line <- function(x, y, d, continent, col.table, ...) {
 }
 
 f <- function(continent) {
-  add.continent.trend.line("gdpPercap", "lifeExp", dat.1982, continent, col.table)
+  add.continent.trend.line("gdpPercap", "lifeExp", data.1982, continent, col.table)
 }
 
 ##########################
 # ANALYSES FORM LESSON 1 #
 ##########################
-dat <- read.csv("gapminder-FiveYearData.csv", stringsAsFactors=FALSE)
+data <- read.csv("gapminder-FiveYearData.csv", stringsAsFactors=FALSE)
 
 double(pi)
 double(2)
 
-dat.1982  <-  dat[dat$year == 1982, ]
-average(dat.1982$gdpPercap) #same as: sum(dat.1982$gdpPercap) / length(dat.1982$gdpPercap)
-variance(dat.1982$pop) #try with var(dat.1982$pop)
+data.1982  <-  data[data$year == 1982, ]
+average(data.1982$gdpPercap) #same as: sum(data.1982$gdpPercap) / length(data.1982$gdpPercap)
+variance(data.1982$pop) #try with var(data.1982$pop)
 
 ##########################
 # ANALYSES FORM LESSON 2 #
@@ -80,20 +80,20 @@ library(plyr)
 get.n.countries(dat)
 
 n.countries  <-  integer(0)
-for(continent in unique(dat$continent)) {
-  n.countries[[continent]]  <-  get.n.countries(dat[dat$continent == continent, ])    
+for(continent in unique(data$continent)) {
+  n.countries[[continent]]  <-  get.n.countries(data[data$continent == continent, ])
 }
 n.countries
 
 #USING PLYR 
-ddply(dat, .(continent), get.n.countries)
-ddply(dat, .(continent, year), get.n.countries)
-ddply(dat, .("continent", "year"), get.n.countries)
-ddply(dat, ~continent*year, get.n.countries)
+ddply(data, .(continent), get.n.countries)
+ddply(data, .(continent, year), get.n.countries)
+ddply(data, .("continent", "year"), get.n.countries)
+ddply(data, ~continent*year, get.n.countries)
 get.total.pop(dat)
-ddply(dat, .(continent, year), get.total.pop)
-ddply(dat, .(continent, year), function(x)sum(x$pop))
-lmPerContAndYear  <-  dlply(dat, .(continent, year), model)
+ddply(data, .(continent, year), get.total.pop)
+ddply(data, .(continent, year), function(x)sum(x$pop))
+lmPerContAndYear  <-  dlply(data, .(continent, year), model)
 
 ######################
 # MAKE PLOTS BY YEAR #
@@ -104,10 +104,10 @@ col.table  <-  c(Asia='tomato',
                  Americas='darkgoldenrod1',
                  Oceania='green4')
 
-col <- colour.by.category(dat.1982$continent, col.table)
-cex <- rescale(sqrt(dat.1982$pop), c(0.2, 10))
+col <- colour.by.category(data.1982$continent, col.table)
+cex <- rescale(sqrt(data.1982$pop), c(0.2, 10))
 
-plot(lifeExp ~ gdpPercap, dat.1982, log="x", cex=cex, col=col, pch=21)
+plot(lifeExp ~ gdpPercap, data.1982, log="x", cex=cex, col=col, pch=21)
 f("Africa")
 f("Asia")
 f("Europe")

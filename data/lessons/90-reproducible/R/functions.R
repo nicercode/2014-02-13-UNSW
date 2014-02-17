@@ -13,8 +13,8 @@ add.trend.line <- function(x, y, d, ...) {
   abline(fit, ...)
 }
 
-pop.by.country.relative <- function(country, dat, base.year=1952) {
-  dsub <- dat[dat$country == country, c("year", "pop")]
+pop.by.country.relative <- function(country, data, base.year=1952) {
+  dsub <- data[data$country == country, c("year", "pop")]
   dsub$pop.rel <- dsub$pop / dsub$pop[dsub$year == base.year]
   dsub
 }

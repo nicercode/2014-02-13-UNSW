@@ -53,14 +53,14 @@ add.trend.line  <-  function(x, y, d, col) {
 }
 
 my.plot  <-  function(year, data, cols) {
-  dat.year  <-  data[data$year == year, ]
-  col       <-  colour.by.category(dat.year$continent, cols)
-  cex       <-  linear.rescale(sqrt(dat.year$pop), range=c(0.2,10))
-  plot(lifeExp ~ gdpPercap, dat.year, las=1, xlab='GDP per capta', ylab='Life expectancy', cex=cex, col='black', bg=col, pch=21, log="x", xlim=c(240,114000), ylim=c(20,85), main=unique(dat.year$year))
+  data.year  <-  data[data$year == year, ]
+  col       <-  colour.by.category(data.year$continent, cols)
+  cex       <-  linear.rescale(sqrt(data.year$pop), range=c(0.2,10))
+  plot(lifeExp ~ gdpPercap, data.year, las=1, xlab='GDP per capta', ylab='Life expectancy', cex=cex, col='black', bg=col, pch=21, log="x", xlim=c(240,114000), ylim=c(20,85), main=unique(data.year$year))
   
-  for(continent in unique(dat.year$continent)) {
+  for(continent in unique(data.year$continent)) {
     add.trend.line("gdpPercap", "lifeExp",
-                   d=dat.year[dat.year$continent == continent,],
+                   d=data.year[data.year$continent == continent,],
                    col=cols[[continent]])
   }
 }
